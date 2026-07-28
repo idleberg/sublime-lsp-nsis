@@ -22,12 +22,12 @@ The language server is downloaded automatically on first use and kept in sync wi
 ```jsonc
 // Preferences: LSP-nsis Settings
 {
-  "server_path": "/opt/homebrew/bin/nsis-lsp",
+  "server_path": "/usr/local/bin/nsis-lsp",
 }
 ```
 
 An absolute path matters here: Sublime Text launched from Finder or the Dock inherits a minimal `PATH` that
-generally excludes `/opt/homebrew/bin`, so a bare `nsis-lsp` may resolve when you launch from a shell and
+generally excludes `/usr/local/bin`, so a bare `nsis-lsp` may resolve when you launch from a shell and
 fail when you launch from the Dock.
 
 ## Configuration
