@@ -51,4 +51,4 @@ These are passed as `initializationOptions`, so changes take effect after restar
 
 ## License
 
-MIT, see [LICENSE](./LICENSE).
+[The MIT License](LICENSE) - Feel free to use, modify, and distribute this code.
