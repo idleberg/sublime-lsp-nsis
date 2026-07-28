@@ -1,0 +1,127 @@
+{
+  "contributions": {
+    "settings": [
+      {
+        "file_patterns": [
+          "/LSP-nsis.sublime-settings"
+        ],
+        "schema": {
+          "$id": "sublime://settings/LSP-nsis",
+          "definitions": {
+            "PluginConfig": {
+              "properties": {
+                "server_path": {
+                  "type": "string",
+                  "default": "auto",
+                  "markdownDescription": "The binary to start the language server with. Use `auto` to let the package install and update a version-pinned `nsis-lsp` in package storage.\n\n> [!NOTE]\n> Change this instead of editing `command` — the `${server_path}` variable resolves from this setting.\n\n> [!WARNING]\n> Prefer an absolute path. Sublime Text launched from Finder or the Dock inherits a minimal `PATH` that usually excludes `/opt/homebrew/bin`."
+                },
+                "initialization_options": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "diagnostics": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "preprocess_mode": {
+                          "enum": [
+                            "ppo",
+                            "safe_ppo",
+                            null
+                          ],
+                          "markdownEnumDescriptions": [
+                            "Run `makensis` with `/PPO` (preprocess only).",
+                            "Run `makensis` with `/SAFEPPO` (preprocess only, skipping instructions that write to disk).",
+                            "No preprocessing flag."
+                          ],
+                          "default": "ppo",
+                          "markdownDescription": "Preprocessor mode used when invoking `makensis` to collect diagnostics."
+                        },
+                        "enabled_on_save": {
+                          "type": "boolean",
+                          "default": true,
+                          "markdownDescription": "Run the compiler to refresh diagnostics when a document is saved."
+                        }
+                      }
+                    },
+                    "formatter": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "end_of_line": {
+                          "enum": [
+                            "lf",
+                            "crlf",
+                            null
+                          ],
+                          "markdownEnumDescriptions": [
+                            "Write `\\n` line endings.",
+                            "Write `\\r\\n` line endings.",
+                            "Keep the line endings already used by the document."
+                          ],
+                          "default": null,
+                          "markdownDescription": "Line endings written by the formatter."
+                        },
+                        "print_width": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "default": 0,
+                          "markdownDescription": "Column the formatter wraps at. `0` disables wrapping."
+                        },
+                        "trim_empty_lines": {
+                          "type": "boolean",
+                          "default": true,
+                          "markdownDescription": "Strip trailing whitespace from otherwise empty lines."
+                        },
+                        "single_quote": {
+                          "type": "boolean",
+                          "default": false,
+                          "markdownDescription": "Prefer single quotes over double quotes."
+                        }
+                      }
+                    },
+                    "makensis": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "path": {
+                          "type": "string",
+                          "default": "",
+                          "markdownDescription": "Path to the `makensis` compiler. An empty string looks it up on `PATH`.\n\n> [!NOTE]\n> Diagnostics are unavailable when `makensis` cannot be found."
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "allOf": [
+            {
+              "$ref": "sublime://settings/LSP-plugin-base"
+            },
+            {
+              "$ref": "sublime://settings/LSP-nsis#/definitions/PluginConfig"
+            }
+          ]
+        }
+      },
+      {
+        "file_patterns": [
+          "/*.sublime-project"
+        ],
+        "schema": {
+          "properties": {
+            "settings": {
+              "properties": {
+                "LSP": {
+                  "properties": {
+                    "LSP-nsis": {
+                      "$ref": "sublime://settings/LSP-nsis#/definitions/PluginConfig"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

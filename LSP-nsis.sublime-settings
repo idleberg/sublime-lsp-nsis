@@ -1,0 +1,36 @@
+{
+	// The binary to start. "auto" lets this package download and update a version-pinned
+	// nsis-lsp into package storage. Set an absolute path to use your own build instead,
+	// e.g. "/opt/homebrew/bin/nsis-lsp".
+	"server_path": "auto",
+
+	"command": ["${server_path}"],
+
+	// Provided by the "NSIS" package (https://packagecontrol.io/packages/NSIS).
+	"selector": "source.nsis",
+
+	// These mirror the server's own defaults.
+	"initialization_options": {
+		"diagnostics": {
+			// Preprocessor mode used when invoking makensis: "ppo", "safe_ppo",
+			// or null to compile without preprocessing only.
+			"preprocess_mode": "ppo",
+			// Run the compiler for diagnostics on save.
+			"enabled_on_save": true
+		},
+		"formatter": {
+			// Line endings to write: "lf", "crlf", or null to keep the file's own.
+			"end_of_line": null,
+			// Column to wrap at. 0 disables wrapping.
+			"print_width": 0,
+			"trim_empty_lines": true,
+			// Prefer single quotes over double quotes.
+			"single_quote": false
+		},
+		"makensis": {
+			// Path to the makensis compiler. Empty means look it up on PATH.
+			// Diagnostics are unavailable when makensis cannot be found.
+			"path": ""
+		}
+	}
+}

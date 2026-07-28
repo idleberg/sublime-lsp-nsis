@@ -1,0 +1,16 @@
+LSP-nsis
+========
+
+Thanks for installing LSP-nsis.
+
+Two other packages are required:
+
+  * LSP    - the language client itself
+  * NSIS   - provides the source.nsis syntax this package binds to
+
+The nsis-lsp language server is downloaded automatically the first time you open
+an NSIS script. To use your own build instead, set an absolute "server_path" in
+Preferences -> Package Settings -> LSP -> Servers -> LSP-nsis.
+
+Diagnostics additionally require the makensis compiler on your PATH, or a
+"makensis.path" pointing at it.
