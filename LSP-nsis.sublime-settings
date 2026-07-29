@@ -4,8 +4,6 @@
 	// e.g. "/opt/homebrew/bin/nsis-lsp".
 	"server_path": "auto",
 
-	"command": ["${server_path}"],
-
 	// Provided by the "NSIS" package (https://packagecontrol.io/packages/NSIS).
 	"selector": "source.nsis",
 
