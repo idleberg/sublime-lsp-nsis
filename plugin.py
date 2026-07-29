@@ -12,7 +12,7 @@ import sublime
 import urllib.request
 import zipfile
 
-SERVER_VERSION = '0.4.7'
+SERVER_VERSION = '0.4.8'
 RELEASE_URL = 'https://github.com/idleberg/nsis-lsp/releases/download/v{version}/nsis-lsp-{version}-{target}.zip'
 USER_AGENT = 'Sublime Text LSP'
 SETTINGS_FILE = 'LSP-nsis.sublime-settings'
