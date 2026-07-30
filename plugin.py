@@ -14,7 +14,7 @@ import sublime
 import urllib.request
 import zipfile
 
-SERVER_VERSION = '0.4.8'
+SERVER_VERSION = '0.5.0'
 RELEASE_URL = 'https://github.com/idleberg/nsis-lsp/releases/download/v{version}/nsis-lsp-{version}-{target}.zip'
 USER_AGENT = 'Sublime Text LSP'
 
