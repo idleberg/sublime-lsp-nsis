@@ -1,8 +1,8 @@
 # LSP-nsis
 
 ![License](https://img.shields.io/github/license/idleberg/sublime-lsp-nsis?style=for-the-badge)
-![Package Control Downloads](https://img.shields.io/packagecontrol/dt/LSP-nsis?style=for-the-badge)
 ![Release](https://img.shields.io/github/v/release/idleberg/sublime-lsp-nsis?style=for-the-badge)
+![Package Control Downloads](https://img.shields.io/packagecontrol/dt/LSP-nsis?style=for-the-badge)
 
 NSIS support for Sublime Text, via [nsis-lsp](https://github.com/idleberg/nsis-lsp) and the
 [LSP](https://packagecontrol.io/packages/LSP) package.
