@@ -48,6 +48,7 @@ a `.sublime-project` file.
 | `formatter.print_width`       | `0`     | Wrap column; `0` disables wrapping.                                 |
 | `formatter.trim_empty_lines`  | `true`  | Strip trailing whitespace from empty lines.                         |
 | `formatter.single_quote`      | `false` | Prefer single over double quotes.                                   |
+| `formatter.comment_style`     | `null`  | `"hash"`, `"semim"`, or `null` to preserve comment markers.         |
 | `makensis.path`               | `""`    | Path to `makensis`; empty looks it up on `PATH`.                    |
 
 These are passed as `initializationOptions`, so changes take effect after restarting the server

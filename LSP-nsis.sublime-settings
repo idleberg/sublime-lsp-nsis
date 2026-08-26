@@ -25,7 +25,9 @@
       "print_width": 0,
       "trim_empty_lines": true,
       // Prefer single quotes over double quotes.
-      "single_quote": false
+      "single_quote": false,
+      // Marker for line comments: "hash", "semi", or null to keep the file's own.
+      "comment_style": null,
     },
     "makensis": {
       // Path to the makensis compiler. Empty means look it up on PATH.

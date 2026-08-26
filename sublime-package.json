@@ -75,6 +75,20 @@
                           "default": false,
                           "markdownDescription": "Prefer single quotes over double quotes."
                         }
+                        "comment_style": {
+                          "enum": [
+                            "hash",
+                            "semi",
+                            null
+                          ],
+                          "markdownEnumDescriptions": [
+                            "Begin line comments with `#`.",
+                            "End line comments with `;`.",
+                            "Keep the existing comment style."
+                          ],
+                          "default": null,
+                          "markdownDescription": "Comment style used by the formatter."
+                        },
                       }
                     },
                     "makensis": {
